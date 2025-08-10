@@ -6,9 +6,6 @@ class ConcreteObserverB : IObserver
 {
     public void Update(ISubject subject)
     {
-        if (((Subject)subject).State is 0 or >= 2)
-        {
-            Console.WriteLine("ConcreteObserverB: Reacted to the event.");
-        }
+        Console.WriteLine($"ConcreteObserverB: Reacted to the event. Subject state: {((Subject)subject).State}");
     }
 }
